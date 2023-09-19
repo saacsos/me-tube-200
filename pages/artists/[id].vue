@@ -15,8 +15,8 @@
 <script setup type="ts">
 const route = useRoute()
 const pageTitle = `Artist ID: ${route.params.id}`
-const { data:artist, error } = await useFetch(
-  `http://localhost/api/artist/${route.params.id}`
+const { data:artist, error } = await useMyFetch(
+  `artist/${route.params.id}`, {}
 )
 if (artist.value === null) {
   const { statusCode, statusMessage } = error.value
