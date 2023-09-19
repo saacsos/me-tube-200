@@ -17,8 +17,5 @@
 </template>
 
 <script setup lang="ts">
-const { data: artists, pending } = await useLazyFetch<any>("http://localhost/api/artist")
-
-console.log(artists.value)
-
+const { data: artists, pending } = await useMyFetch<any>("artist", {})
 </script>
