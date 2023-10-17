@@ -18,4 +18,10 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
   ],
+  serverHandlers: [
+    {
+      route: '/ws',
+      handler: '~/server/middleware/socket'
+    }
+  ]
 })
