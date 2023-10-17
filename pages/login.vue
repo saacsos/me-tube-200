@@ -26,7 +26,7 @@
                       <a href="#!"
                           class="font-semibold text-gray-600 hover:underline focus:text-gray-800 focus:outline-none">Sign
                           up
-                      </a>.
+                      </a>
                   </p>
               </form>
           </div>
@@ -37,7 +37,7 @@
 <script setup lang="ts">
 import { useAuthStore } from "~/stores/useAuthStore"
 
-const auth = await useAuthStore()
+const auth = useAuthStore()
 const errorMessage = ref<string|undefined>("")
 const formData = reactive({ email: "", password: "" })
 
@@ -58,7 +58,7 @@ async function onSubmit() {
         await navigateTo('/playlist')
       } else {
         auth.clear()
-        errorMessage.value = "Please try again."
+        errorMessage.value = "Please try again"
       }
       
     }
